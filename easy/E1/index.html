@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Soal 01 - Hello World</title>
+</head>
+<body>
+
+  <h2>Soal 01: Hello World!</h2>
+
+  <button id="tombolHello">Tampilkan Pesan</button>
+  <p id="pesanTeks"></p>
+
+  <script>
+    const tombolHello = document.getElementById('tombolHello');
+    const pesanTeks = document.getElementById('pesanTeks');
+
+    tombolHello.addEventListener('click', function() {
+      pesanTeks.textContent = 'Hello World!';
+    });
+    
+  </script>
+</body>
+</html>
