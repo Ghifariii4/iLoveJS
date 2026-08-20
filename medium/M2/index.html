@@ -1,23 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Soal 02 - Validasi Input Nama</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Soal 02 - Validasi Input Nama</title>
-</head>
+  <body>
+    <h2>Soal 02: Validasi Input Nama</h2>
 
-<body>
+    <input type="text" id="inputNama" placeholder="Tulis namamu di sini..." />
+    <button id="tombolCek">Cek Nama</button>
+    <p id="hasilCek"></p>
 
-  <h2>Soal 02: Validasi Input Nama</h2>
+    <script>
+      const inputNama = document.getElementById("inputNama");
+      const tombolCek = document.getElementById("tombolCek");
+      const hasilCek = document.getElementById("hasilCek");
 
-  <input type="text" id="inputNama" placeholder="Tulis namamu di sini..." />
-  <button id="tombolCek">Cek Nama</button>
-  <p id="hasilCek"></p>
-
-  <script>
-    // Tuliskan JavaScript kamu di sini 
-    // Tips: Gunakan inputNama.value untuk membaca isi input
-  </script>
-</body>
-
+      tombolCek.addEventListener("click", function () {
+        if (inputNama.value.trim() === "") {
+          hasilCek.innerText = "Nama tidak boleh kosong!";
+        } else {
+          hasilCek.innerText = "Halo, " + inputNama.value;
+        }
+      });
+    </script>
+  </body>
 </html>
