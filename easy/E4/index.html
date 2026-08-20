@@ -12,8 +12,13 @@
   <button id="tombolSembunyi">Sembunyikan</button>
 
   <script>
-    // Tuliskan JavaScript kamu di sini 👇    
+    const teksRahasia = document.getElementById("teksRahasia")
+    const tombolPetrus = document.getElementById("tombolSembunyi") 
     
+    tombolPetrus.addEventListener("click", function(){
+      teksRahasia.innerText = ""
+    })
+
   </script>
 </body>
 </html>
