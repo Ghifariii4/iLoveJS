@@ -1,19 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <title>Soal 07 - Tampilkan Tanggal</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Soal 07 - Tampilkan Tanggal</title>
+  </head>
+  <body>
+    <h2>Soal 07: Tampilkan Tanggal</h2>
 
-  <h2>Soal 07: Tampilkan Tanggal</h2>
+    <button id="tombolTanggal">Lihat Tanggal</button>
+    <p id="infoTanggal"></p>
 
-  <button id="tombolTanggal">Lihat Tanggal</button>
-  <p id="infoTanggal"></p>
+    <script>
+      const tombolTanggal = document.getElementById("tombolTanggal");
+      const infoTanggal = document.getElementById("infoTanggal");
 
-  <script>
-    // Tuliskan JavaScript kamu di sini 
+      tombolTanggal.addEventListener("click", function () {
+        infoTanggal.innerText = "Hari ini: Senin";
+      });
 
-  </script>
-</body>
+
+      
+    </script>
+  </body>
 </html>
