@@ -12,8 +12,15 @@
   <button id="tombolKlik">Klik Saya!</button>
 
   <script>
-    // Tuliskan JavaScript kamu di sini 
-    // Tips: Buat variabel untuk menyimpan jumlah klik
+    const tombolKlik = document.getElementById("tombolKlik")
+    const tampilKlik = document.getElementById("tampilKlik")
+
+    let  jumlahKlik = 0
+
+    tombolKlik.addEventListener("click", function(){
+      jumlahKlik++
+      tampilKlik.innerText = "Jumlah Klik: " + jumlahKlik
+    })
 
   </script>
 </body>
