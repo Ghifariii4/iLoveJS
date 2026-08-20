@@ -16,14 +16,40 @@
   <p id="infoATM"></p>
 
   <script>
-    // Tuliskan JavaScript kamu di sini 
+    const tombolTarik = document.getElementById("tombolTarik")
+    const tombolSetor = document.getElementById("tombolSetor")
+    const tombolCekSaldo = document.getElementById("tombolCekSaldo")
+    const infoATM = document.getElementById("infoATM")
 
     let saldo = 500000;
 
-    // Tips: Validasi input dulu sebelum proses transaksi
-    // Tips: Untuk Tarik, cek apakah saldo >= nominal
+    tombolTarik.addEventListener("click", function(){
+      inputNominal = Number(document.getElementById("inputNominal").value)
+      if (saldo >= inputNominal && inputNominal > 0){
+        saldo -= inputNominal
+        infoATM.innerText = "Tarik tunai berhasil. Saldo: Rp " + saldo.toString()
+      } else if (inputNominal <= 0 || isNaN(inputNominal)){
+        infoATM.innerText = "Masukkan nominal yang valid!"
+      } else {
+        infoATM.innerText = "Saldo tidak cukup!"
+      }
 
+    })
 
+    tombolSetor.addEventListener("click", function(){
+        inputNominal = Number(document.getElementById("inputNominal").value)
+        if (inputNominal > 0 && !isNaN(inputNominal)){
+          saldo += inputNominal
+          infoATM.innerText = "Setor Berhasil. Saldo: Rp " + saldo.toString()
+        } else {
+          infoATM.innerText = "Masukkan nominal yang valid!"
+        }
+    })
+
+    tombolCekSaldo.addEventListener("click", function(){
+      infoATM.innerText = "Saldo Kamu: Rp " + saldo.toString()
+
+    })
 
     
     
