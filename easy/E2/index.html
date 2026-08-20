@@ -14,7 +14,12 @@
     <button id="tombolNama">Isi Nama</button>
 
     <script>
-        // Tuliskan JavaScript kamu di sini 
+        const judulTeks = document.getElementById('judul');
+        const tombolNama = document.getElementById('tombolNama');
+
+        tombolNama.addEventListener('click', function() {
+            judulTeks.innerText = "Nama: Jeanne";
+        });
     </script>
 </body>
 
