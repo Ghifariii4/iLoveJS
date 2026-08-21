@@ -18,6 +18,22 @@
     // Tuliskan JavaScript kamu di sini 
     // Tips: document.body.style.backgroundColor untuk ubah background halaman
 
+    const tombolGelap = document.getElementById("tombolGelap")
+    const tombolTerang = document.getElementById("tombolTerang")
+    let statusTema = document.getElementById("statusTema")
+
+    tombolGelap.addEventListener("click", function(){
+      document.body.style.backgroundColor = "black";
+      statusTema.style.color = "white";
+      statusTema.innerText = "Mode Gelap Aktif";
+    })
+
+    tombolTerang.addEventListener("click", function(){
+      document.body.style.backgroundColor = "white";
+      statusTema.style.color = "black";
+      statusTema.innerText = "Mode Terang Aktif";
+    })
+
   </script>
 </body>
 
