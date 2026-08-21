@@ -15,7 +15,19 @@
     // Tuliskan JavaScript kamu di sini 
     // Tips: Simpan angka awal di variabel, lalu kurangi setiap klik
 
+    const angkaHitung = document.getElementById("angkaHitung")
+    const tombolKurangi = document.getElementById("tombolKurangi")
     let angka = 10;
+
+    tombolKurangi.addEventListener("click", function(){
+      if (angka > 0){
+        angka -= 1;
+        angkaHitung.innerText = angka;
+      } else {
+        tombolKurangi.disabled = true;
+        angkaHitung.innerText = "Liftoff!";
+      }
+    })
   </script>
 </body>
 </html>
